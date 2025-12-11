@@ -9,9 +9,10 @@ public class PlayerModeMenu extends JFrame {
 
     public PlayerModeMenu() {
         setTitle("Select Mode");
-        setSize(400, 500);
+        setSize(1300, 800);
         setLocationRelativeTo(null);
-        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
 
         JPanel backgroundPanel = new JPanel();
         backgroundPanel.setLayout(new GridBagLayout());
