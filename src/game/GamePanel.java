@@ -234,17 +234,18 @@ public class GamePanel extends GLCanvas implements GLEventListener, KeyListener,
             handleGameOver(true, "Player " + playerID);
         }
         if (b.getY() > gameHeight) {
+            int correctSpeed = GameState.getBallSpeed();
             if (playerID == 1) {
                 lives1--;
                 if (lives1 <= 0) {
                     if (isMultiplayer) handleGameOver(true, "Player 2");
                     else handleGameOver(false, "Player 1");
                 }
-                else b.reset(gameWidth/2, gameHeight/2, 5);
+                else b.reset(gameWidth/2, gameHeight/2, correctSpeed);
             } else {
                 lives2--;
                 if (lives2 <= 0) handleGameOver(true, "Player 1");
-                else b.reset(gameWidth/2, gameHeight/2, 5);
+                else b.reset(gameWidth/2, gameHeight/2, correctSpeed);
             }
         }
     }
