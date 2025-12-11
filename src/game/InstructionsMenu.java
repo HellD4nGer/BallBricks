@@ -8,7 +8,7 @@ public class InstructionsMenu extends JFrame {
 
     public InstructionsMenu() {
         setTitle("Instructions");
-        setSize(500, 600);
+        setSize(1300, 800);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 

@@ -46,8 +46,8 @@ public class GamePanel extends GLCanvas implements GLEventListener, KeyListener,
     private int lives2 = 3;
     private boolean p1Left, p1Right;
     private boolean p2Left, p2Right;
-    private int gameWidth = 800;
-    private int gameHeight = 600;
+    private int gameWidth = 1300;
+    private int gameHeight = 800;
     private boolean isMultiplayer = false;
     private String activeButton = null;
 

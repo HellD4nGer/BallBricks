@@ -8,7 +8,7 @@ public class DifficultyMenu extends JFrame {
 
     public DifficultyMenu() {
         setTitle("Select Difficulty");
-        setSize(400, 500);
+        setSize(1300, 800);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
