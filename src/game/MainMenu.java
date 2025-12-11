@@ -36,7 +36,7 @@ public class MainMenu extends JFrame {
         gbc.fill = GridBagConstraints.HORIZONTAL;
 
 
-        JLabel titleLabel = new JLabel("BALL BRICKS ", SwingConstants.CENTER);
+        JLabel titleLabel = new JLabel("BALL BRICKS", SwingConstants.CENTER);
         titleLabel.setFont(new Font("Verdana", Font.BOLD, 48));
         titleLabel.setForeground(Color.CYAN);
 
@@ -45,12 +45,18 @@ public class MainMenu extends JFrame {
         backgroundPanel.add(Box.createVerticalStrut(20), gbc);
 
         JButton btnPlay = createFancyButton("PLAY GAME");
+        JButton btnInstructions = createFancyButton("INSTRUCTIONS"); // <--- NEW BUTTON
         JButton btnHighScores = createFancyButton("HIGH SCORES");
         JButton btnSettings = createFancyButton("SETTINGS");
         JButton btnExit = createFancyButton("EXIT");
 
         btnPlay.addActionListener(e -> {
             new PlayerModeMenu().setVisible(true);
+            dispose();
+        });
+
+        btnInstructions.addActionListener(e -> {
+            new InstructionsMenu().setVisible(true);
             dispose();
         });
 
@@ -67,6 +73,7 @@ public class MainMenu extends JFrame {
         btnExit.addActionListener(e -> System.exit(0));
 
         backgroundPanel.add(btnPlay, gbc);
+        backgroundPanel.add(btnInstructions, gbc);
         backgroundPanel.add(btnHighScores, gbc);
         backgroundPanel.add(btnSettings, gbc);
         backgroundPanel.add(btnExit, gbc);
