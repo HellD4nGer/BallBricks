@@ -13,9 +13,10 @@ public class HighScoreMenu extends JFrame {
 
     public HighScoreMenu() {
         setTitle("High Scores");
-        setSize(600, 700);
+        setSize(1300, 800);
         setLocationRelativeTo(null);
-        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
 
         JPanel backgroundPanel = new JPanel();
         backgroundPanel.setLayout(new BorderLayout());
@@ -56,7 +57,7 @@ public class HighScoreMenu extends JFrame {
         textArea.setFont(new Font("Monospaced", Font.BOLD, 16));
         textArea.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
-        ArrayList scores = HighScoreSaver.loadScores();
+        ArrayList scores = (ArrayList) HighScoreSaver.loadScores();
         if (scores.isEmpty()) {
             textArea.setText("\n   No high scores yet!\n   Play a game to save one.");
         } else {

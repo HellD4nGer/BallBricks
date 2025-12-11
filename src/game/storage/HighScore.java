@@ -2,7 +2,7 @@ package game.storage;
 
 import java.io.Serializable;
 
-public class HighScore implements Serializable {
+public class HighScore implements Serializable, Comparable<HighScore> {
     private String name;
     private int score;
 
@@ -16,5 +16,10 @@ public class HighScore implements Serializable {
 
     public String toString() {
         return name + ": " + score;
+    }
+
+    @Override
+    public int compareTo(HighScore other) {
+        return Integer.compare(other.score, this.score);
     }
 }
